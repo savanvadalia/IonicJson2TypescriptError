@@ -17,36 +17,28 @@ export class HomePage {
 
   doDeserialization() {
 
-    let jsonStr: string = `{
+    // Define a JSON string (could come from a HTTP service)
+    let jsonObject: object = {
       "countryName": "Switzerland",
       "cities": [
         {
-          "id": 1,
           "name": "Basel",
           "founded": -200,
-          "beautiful": true,
-          "data": 123,
-          "keywords": ["Rhine", "River"]
+          "beautiful": true
         },
         {
-          "id": 1,
           "name": "Zurich",
           "founded": 0,
-          "beautiful": false,
-          "data": "no",
-          "keywords": ["Limmat", "Lake"]
+          "beautiful": false
         }
       ]
-    }`;
-
-    // Define a JSON string (could come from a HTTP service)
-    let jsonObject: object = JSON.parse(jsonStr);
+    };
 
     // Choose your settings
     // Check the detailed reference in the chapter "JsonConvert class properties and methods"
     let jsonConvert: JsonConvert = new JsonConvert();
-    jsonConvert.operationMode = OperationMode.LOGGING; // print some debug data
-    jsonConvert.ignorePrimitiveChecks = false; // don't allow assigning number to string etc.
+    // print some debug data from the lib
+    jsonConvert.operationMode = OperationMode.LOGGING;
 
     // Map to the country class
     try {

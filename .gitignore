@@ -1,0 +1,51 @@
+﻿# .gitignore
+
+# Ignore JAVA Files
+target/
+build/
+*.class
+
+# Embedded projects
+Release/
+
+##########################################################################
+
+# Ignore Visual Studio Files
+
+#ignore the Visual Studio build files
+.vs/
+.vscode/
+bin/
+bld/
+obj/
+*.VC.db
+logs/
+www/
+#ignore visual studio User-specific files
+*.suo
+*.user
+
+#ignore Visual studio nuget packages file
+packages/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+#ignore the files built by npm and bower
+node_modules/
+bower_components/
+
+#ignore installed plugins
+plugins/
+
+
+
+#ignore app build by cordova
+[Pp]latforms/
+
+#ignore embedded files
+*.cpp.d
+*.cpp.o
+*.ino.cpp
